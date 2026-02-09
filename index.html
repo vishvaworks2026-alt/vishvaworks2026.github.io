@@ -9,53 +9,95 @@
       max-width: 200px;
       margin-bottom: 20px;
     }
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.8;
-      background: #f8f8f8;
-      color: #222;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .service-box a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      background: #eee;
-      padding: 30px 20px;
-      font-size: 0.9em;
-    }
-  </style>
+   body {
+    margin: 0;
+    background: #000;
+    color: #e5e5e5;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  header {
+    padding: 100px 20px 80px;
+    text-align: center;
+  }
+
+  header img {
+    width: 160px;
+    margin-bottom: 40px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  header p {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 0.95rem;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+  }
+
+  .service-box {
+    border-top: 1px solid #222;
+    padding-top: 30px;
+  }
+
+  .service-box h3 {
+    margin: 0 0 15px;
+    font-size: 1.1rem;
+  }
+
+  .service-box p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .service-box a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+    padding-bottom: 6px;
+    font-size: 0.85rem;
+  }
+
+  .service-box a:hover {
+    border-color: #fff;
+  }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+  }
+
+  a {
+    color: inherit;
+  }
+</style>
 </head>
 <body>
 
