@@ -1,209 +1,197 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <title>Vishva Works</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .logo img {
-  max-height: 36px;
-  width: auto;
-  display: block;
-}
-   body {
-    margin: 0;
-    background: #0f0f10;
-    color: #e6e6e6;
-    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-    letter-spacing: 0.03em;
-  }
+<meta charset="UTF-8">
+<title>Vishva Works</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  header {
-    padding: 90px 20px 70px;
-    text-align: center;
-  }
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 
-  header img {
-    width: 150px;
-    margin-bottom: 30px;
-  }
-
-  header h1 {
-    font-size: 2.8rem;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  header p {
-    margin-top: 20px;
-    color: #9a9a9a;
-    font-size: 0.95rem;
-  }
-
-  section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 80px 20px;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    font-weight: 500;
-    border-bottom: 1px solid #2a2a2e;
-    padding-bottom: 15px;
-  }
-
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
-  }
-
-  .service-box {
-    background: #18181b;
-    padding: 30px;
-    border-radius: 6px;
-  }
-
-  .service-box h3 {
-    margin: 0 0 15px;
-    font-size: 1.05rem;
-    font-weight: 600;
-  }
-
-  .service-box p {
-    font-size: 0.9rem;
-    color: #b5b5b5;
-    line-height: 1.7;
-  }
-
-  .service-box a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #e6e6e6;
-    text-decoration: none;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-    font-size: 0.85rem;
-  }
-
-  .service-box a:hover {
-    border-color: #fff;
-  }
-
-  footer {
-    border-top: 1px solid #2a2a2e;
-    padding: 50px 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #777;
-  }
-    .site-header {
-  border-bottom: 1px solid #2a2a2e;
+<style>
+:root {
+  --bg-main: #0f1115;
+  --bg-sub: #141821;
+  --text-main: #e6e6e6;
+  --text-sub: #a9a9a9;
+  --border: #2a2f3a;
+  --accent: #ffffff;
 }
 
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 34px 24px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.8;
+}
+
+/* ===== Header ===== */
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--border);
 }
 
-.logo img {
-  height: auto !important;
-  max-height: 40px;
-  width: auto !important;
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
+header img {
+  height: 42px;
+  width: auto;
 }
 
 nav a {
-  margin-left: 30px;
+  margin-left: 28px;
   text-decoration: none;
-  color: #e6e6e6;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--text-sub);
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: var(--accent);
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 120px 40px 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  color: var(--text-sub);
+  max-width: 520px;
+}
+
+/* ===== Section ===== */
+section {
+  padding: 100px 40px;
+  border-top: 1px solid var(--border);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  margin-bottom: 60px;
+}
+
+/* ===== What We Do ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+}
+
+.service h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+}
+
+.service p {
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.service a {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 60px 40px;
+  font-size: 12px;
+  color: var(--text-sub);
+  border-top: 1px solid var(--border);
 }
 </style>
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="A2403296-18B4-48AB-BC82-A71D61BE190C.PNG" alt="Vishva Works">
-    </a>
-    <nav>
-      <a href="music.html">Music</a>
-      <a href="game.html">Game</a>
-      <a href="gear.html">Gear</a>
-      <a href="repair.html">Repair</a>
-    </nav>
-  </div>
+<header>
+  <!-- ロゴ画像（高さ固定で潰れ防止） -->
+  <img src="A2403296-18B4-48AB-BC82-A71D61BE190C.PNG" alt="Vishva Works Logo">
+  <nav>
+    <a href="music.html">MUSIC</a>
+    <a href="game.html">GAME</a>
+    <a href="gear.html">GEAR</a>
+    <a href="repair.html">REPAIR</a>
+  </nav>
 </header>
 
+<div class="hero">
+  <h1>Vishva Works</h1>
+  <p>
+    Music, Games, and Instruments.<br>
+    Crafted by creators who love sound and systems.
+  </p>
+</div>
+
 <section>
-  <h2>活動内容</h2>
-  <div class="services">
+  <div class="section-inner">
+    <div class="section-title">WHAT WE DO</div>
 
-    <div class="service-box">
-      <h3>音楽制作</h3>
-      <p>楽曲制作、アレンジ、ミックス、マスタリング依頼を承ります。</p>
-      <a href="music.html">▶ 商品・見積はこちら</a>
+    <div class="services">
+      <div class="service">
+        <h3>MUSIC</h3>
+        <p>
+          作曲、編曲、ミックス、マスタリングなど音楽制作全般を行います。
+        </p>
+        <a href="music.html">VIEW DETAILS</a>
+      </div>
+
+      <div class="service">
+        <h3>GAME</h3>
+        <p>
+          オリジナルゲームの企画・開発・音楽制作を行っています。
+        </p>
+        <a href="game.html">VIEW DETAILS</a>
+      </div>
+
+      <div class="service">
+        <h3>GEAR</h3>
+        <p>
+          エフェクターなどの楽器・機材制作、カスタム対応。
+        </p>
+        <a href="gear.html">VIEW DETAILS</a>
+      </div>
     </div>
-
-    <div class="service-box">
-      <h3>ゲーム制作</h3>
-      <p>オリジナルゲーム制作を行っています。</p>
-      <a href="game.html">▶ 商品はこちら</a>
-    </div>
-
-    <div class="service-box">
-      <h3>楽器・機材制作</h3>
-      <p>エフェクターなどの楽器・機材の制作、カスタム対応。</p>
-      <a href="gear.html">▶ 商品・見積はこちら</a>
-    </div>
-
-    <div class="service-box">
-      <h3>楽器・機材修理</h3>
-      <p>楽器や機材の修理・調整のご相談を受け付けています。</p>
-      <a href="repair.html">▶ 見積・依頼はこちら</a>
-    </div>
-
   </div>
-</section>
-
-<section>
-  <h2>注意事項・免責</h2>
-  <p>
-    ・当サークルは免税事業者です。  
-    ・制作物の仕様や納期については、事前の打ち合わせ内容をもとに進行します。  
-    ・内容によってはご依頼をお断りする場合があります。
-  </p>
-</section>
-
-<section>
-  <h2>お問い合わせ</h2>
-  <p>
-    ご依頼・ご相談は以下よりご連絡ください。
-  </p>
-  <ul>
-    <li>メール：vishvaworks2026@gmail.com</li>
-    <li>SNS：</li>
-  </ul>
 </section>
 
 <footer>
-  <p>© Vishva Works</p>
+  © Vishva Works
 </footer>
 
 </body>
