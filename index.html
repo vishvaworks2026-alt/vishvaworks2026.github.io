@@ -99,17 +99,50 @@
     font-size: 0.8rem;
     color: #777;
   }
+    .site-header {
+  border-bottom: 1px solid #2a2a2e;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #e6e6e6;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
 </style>
 </head>
 <body>
 
-<header>
-  <img src="A2403296-18B4-48AB-BC82-A71D61BE190C.PNG" alt="Vishva Works ロゴ" class="logo">
-  <h1>Vishva Works</h1>
-   <p>
-    Music. Games. Instruments.<br>
-    Built by creators.
-  </p>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="A2403296-18B4-48AB-BC82-A71D61BE190C.PNG" alt="Vishva Works">
+    </a>
+    <nav>
+      <a href="music.html">Music</a>
+      <a href="game.html">Game</a>
+      <a href="gear.html">Gear</a>
+      <a href="repair.html">Repair</a>
+    </nav>
+  </div>
 </header>
 
 <section>
