@@ -38,11 +38,19 @@ body {
   color: #aaa;
 }
 
-.footer-logo {
-  width: 140px;        /* 基本サイズ */
-  max-width: 40vw;     /* 画面が狭い時は縮む */
-  margin-bottom: 20px;
-  opacity: 0.9;        /* 少しだけ控えめ */
+footer {
+  padding: 40px 0;      /* フッターの上下余白 */
+  text-align: center;
+}
+footer {
+  opacity: 0.9;
+}
+footer img {
+  max-width: 200px;    /* ← ロゴの最大サイズ */
+  width: 60%;          /* スマホ対応 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .site-footer p {
   margin: 0;
