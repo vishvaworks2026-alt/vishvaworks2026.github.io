@@ -105,3 +105,25 @@ nav a.active {
 nav a.active::after {
   width: 100%;
 }
+/* ===== Hero Animation ===== */
+
+.hero h1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
