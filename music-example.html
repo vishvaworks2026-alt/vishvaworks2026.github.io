@@ -68,13 +68,19 @@
     }
 
     /* ===== 商品カード ===== */
-    .card {
-      background: #1a1a1d;
-      padding: 25px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-    }
+  .card {
+  background: #1a1a1d;
+  padding: 28px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #242428;
+  transition: 0.3s ease;
+}
 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
     .card h3 {
       margin-top: 0;
     }
