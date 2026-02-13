@@ -1,34 +1,222 @@
-/* 共通レイアウト */
+/* ===============================
+   Vishva Works - Unified Style
+   Dark × Gold Glow Edition
+================================= */
+
+/* ===== 変数 ===== */
+:root {
+  --bg-main: #0f1115;
+  --bg-sub: #161a22;
+  --text-main: #e6e6e6;
+  --text-sub: #a9a9a9;
+  --border: #2a2f3a;
+  --accent: #caa96b;
+}
+
+/* ===== リセット ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #111;
-  color: #eee;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.8;
 }
-/* 全リンク共通設定 */
-a {
-  color: #caa96b;
+
+/* ===============================
+   HEADER
+================================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+header img {
+  height: 42px;
+  width: auto;
+}
+
+/* ナビリンク */
+nav a {
+  margin-left: 28px;
   text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  position: relative;
   transition: 0.3s ease;
 }
 
-/* ホバー時に発光 */
-a:hover {
-  color: #ffffff;
-  text-shadow:
-    0 0 5px rgba(202,169,107,0.7),
-    0 0 10px rgba(202,169,107,0.5),
-    0 0 20px rgba(202,169,107,0.3);
-}
-/* カード */
-.card {
-  background: #1a1a1a;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
+/* アンダーライン */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1px;
+  background: var(--accent);
+  transition: 0.3s ease;
 }
 
-/* YouTube */
+/* ホバー時発光 */
+nav a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(202,169,107,0.8),
+    0 0 10px rgba(202,169,107,0.6),
+    0 0 20px rgba(202,169,107,0.4);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   HERO
+================================= */
+
+.hero {
+  padding: 120px 40px 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 42px;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  color: var(--text-sub);
+  max-width: 520px;
+}
+
+/* ===============================
+   SECTION
+================================= */
+
+section {
+  padding: 100px 40px;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  margin-bottom: 60px;
+  color: var(--accent);
+}
+
+/* ===============================
+   SERVICES GRID
+================================= */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+}
+
+.service h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.service p {
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+/* VIEW DETAILSリンク */
+.service a {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+.service a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(202,169,107,0.8),
+    0 0 10px rgba(202,169,107,0.6);
+}
+
+/* ===============================
+   CARD
+================================= */
+
+.card {
+  background: var(--bg-sub);
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* ===============================
+   BUTTON
+================================= */
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #121214;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(202,169,107,0.6);
+}
+
+/* ===============================
+   YOUTUBE
+================================= */
+
 .youtube {
   margin-top: 20px;
   position: relative;
@@ -43,87 +231,35 @@ a:hover {
   height: 100%;
 }
 
-/* フッター */
+/* ===============================
+   FOOTER
+================================= */
+
 .site-footer {
   background: #000;
-  padding: 40px 20px;
+  padding: 60px 40px;
   text-align: center;
   font-size: 0.85rem;
-  color: #aaa;
+  color: var(--text-sub);
+  border-top: 1px solid var(--border);
 }
 
-footer {
-  padding: 40px 0;      /* フッターの上下余白 */
-  text-align: center;
-}
-footer {
-  opacity: 0.9;
-}
-footer img {
-  max-width: 200px;    /* ← ロゴの最大サイズ */
-  width: 60%;          /* スマホ対応 */
+.site-footer img {
+  max-width: 180px;
+  width: 60%;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  margin-bottom: 20px;
 }
-.site-footer p {
-  margin: 0;
-  line-height: 1.6;
-  letter-spacing: 0.05em;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #caa96b;
-  color: #121214;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  border-radius: 4px;
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
   transition: 0.3s ease;
 }
 
-.btn:hover {
-  background: #ffffff;
-  color: #000;
-  box-shadow: 0 0 15px rgba(202,169,107,0.6);
-}
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-nav a.active {
-  color: var(--accent);
-}
-
-nav a.active::after {
-  width: 100%;
-}
-/* ===== Hero Animation ===== */
-
-.hero h1 {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1.2s ease forwards;
-  animation-delay: 0.3s;
-}
-
-.hero p {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1.2s ease forwards;
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.site-footer a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(202,169,107,0.8),
+    0 0 10px rgba(202,169,107,0.6);
 }
