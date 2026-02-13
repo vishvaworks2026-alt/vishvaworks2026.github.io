@@ -220,12 +220,12 @@ section.show {
 .youtube {
   width: 90%;
   max-width: 560px;   /* 上品サイズ */
-  margin: 60px auto;  /* 上下余白たっぷり */
+  margin: 60px auto;
+  aspect-ratio: 16 / 9;
 }
 
 .youtube iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
   border-radius: 14px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
