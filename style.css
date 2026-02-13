@@ -263,3 +263,44 @@ section.show {
     0 0 5px rgba(202,169,107,0.8),
     0 0 10px rgba(202,169,107,0.6);
 }
+/* ===== Hero Layout Upgrade ===== */
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+  transition: 0.4s ease;
+}
+
+/* ちょっと浮かせる */
+.hero-image img:hover {
+  transform: translateY(-8px);
+}
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
