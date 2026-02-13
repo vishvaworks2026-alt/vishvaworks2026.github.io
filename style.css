@@ -218,10 +218,10 @@ section.show {
 ================================= */
 
 .youtube {
-  margin: 40px auto;      /* 上下余白＋中央寄せ */
+  margin: 30px auto;
   position: relative;
-  padding-top: 56.25%;    /* 16:9維持 */
-  max-width: 700px;      
+  padding-top: 56.25%;
+  max-width: 500px;   /* ← 小さめに */
 }
 
 .youtube iframe {
@@ -230,7 +230,7 @@ section.show {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 12px;    
+  border-radius: 10px;
 }
 
 /* ===============================
