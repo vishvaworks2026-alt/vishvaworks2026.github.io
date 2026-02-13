@@ -5,7 +5,9 @@ body {
   background: #111;
   color: #eee;
 }
-
+nav a:hover {
+  color: var(--accent);
+}
 /* カード */
 .card {
   background: #1a1a1a;
