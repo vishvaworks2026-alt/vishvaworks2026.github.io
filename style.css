@@ -5,8 +5,20 @@ body {
   background: #111;
   color: #eee;
 }
-nav a:hover {
-  color: var(--accent);
+/* 全リンク共通設定 */
+a {
+  color: #caa96b;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* ホバー時に発光 */
+a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(202,169,107,0.7),
+    0 0 10px rgba(202,169,107,0.5),
+    0 0 20px rgba(202,169,107,0.3);
 }
 /* カード */
 .card {
