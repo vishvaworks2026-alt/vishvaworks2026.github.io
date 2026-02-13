@@ -304,3 +304,27 @@ section.show {
     margin-top: 40px;
   }
 }
+.site-header {
+  border-bottom: 1px solid #2a2f3a;
+  background: #0f1115;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 42px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
