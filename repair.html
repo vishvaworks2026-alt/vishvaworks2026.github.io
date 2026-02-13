@@ -107,20 +107,7 @@ nav a:hover::after {
     }
   </style>
 </head>
-<script>
-const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const position = section.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-
-    if (position < screenHeight - 100) {
-      section.classList.add("show");
-    }
-  });
-});
-</script>
 <body>
 
 <!-- ===== 共通ヘッダー ===== -->
@@ -170,7 +157,20 @@ window.addEventListener("scroll", () => {
 
   </p>
 </footer>
+<script>
+const sections = document.querySelectorAll("section");
 
+window.addEventListener("scroll", () => {
+  sections.forEach(section => {
+    const position = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 100) {
+      section.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
