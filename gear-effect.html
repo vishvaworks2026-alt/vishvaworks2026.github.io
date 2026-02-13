@@ -145,17 +145,26 @@ nav a:hover::after {
   </p>
 </footer>
 <script>
-const sections = document.querySelectorAll("section");
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const position = section.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
+  const sections = document.querySelectorAll("section");
 
-    if (position < screenHeight - 100) {
-      section.classList.add("show");
-    }
-  });
+  function checkScroll() {
+    sections.forEach(section => {
+      const position = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (position < screenHeight - 100) {
+        section.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+
+  // ページ読み込み時にも発動
+  checkScroll();
+
 });
 </script>
 
