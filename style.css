@@ -353,3 +353,28 @@ nav {
   }
 
 }
+/* ===== Gear Section ===== */
+
+.gear-section {
+  padding: 120px 40px;
+}
+
+.gear-title {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2em;
+  margin-bottom: 60px;
+}
+
+/* 横スクロール */
+.gear-slider {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.gear-slider::-webkit-scrollbar {
+  height: 6px;
+}
