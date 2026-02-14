@@ -72,6 +72,25 @@
     当サークルは免税事業者です。
   </p>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
+  const sections = document.querySelectorAll(".fade-section");
+
+  function checkScroll() {
+    sections.forEach(section => {
+      const position = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (position < screenHeight - 100) {
+        section.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll(); // 読み込み時にも発動
+});
+</script>
 </body>
 </html>
