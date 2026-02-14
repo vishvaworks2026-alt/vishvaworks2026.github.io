@@ -109,12 +109,16 @@ nav a:hover::after {
 section {
   padding: 100px 40px;
   border-top: 1px solid var(--border);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
 }
 
-section.show {
+/* 全ページ共通フェード */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.show {
   opacity: 1;
   transform: translateY(0);
 }
