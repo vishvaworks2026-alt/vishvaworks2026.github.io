@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <title>Music | Vishva Works</title>
+  <title>Tonecraft | Vishva Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font（Darkglass系） -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,73 +22,56 @@
       <a href="game.html">Game</a>
       <a href="gear.html">Gear</a>
       <a href="repair.html">Repair</a>
+      <a href="tonecraft.html">Tonecraft</a>
     </nav>
   </div>
 </header>
-<section class="gear-section">
 
-  <h2 class="gear-title">GEAR COLLECTION</h2>
+<!-- ===== メイン ===== -->
+<section class="tonecraft-hero">
+  <h1>TONECRAFT</h1>
+  <p>学生が手の届く価格で、本気の音を。</p>
+</section>
 
-  <div class="gear-slider">
+<!-- ===== エフェクター一覧 ===== -->
+<section class="effect-list">
 
-    <!-- ===== 1台目 ===== -->
-    <div class="product-card">
-      <img src="tonecraft.png" alt="Tone Craft">
-      <h3>TONE CRAFT</h3>
-      <p>Warm low-gain overdrive. First Batch.</p>
-      <span class="price">¥13,800</span>
-      <a href="tonecraft.html" class="btn">VIEW</a>
+  <!-- ===== 1台目 ===== -->
+  <div class="effect-card">
+    <img src="effect1.jpg" alt="Effect 01">
+    <h2>Effect 01</h2>
+    <p>ソリッドで抜けるドライブペダル。</p>
+
+    <div class="effect-links">
+      <a href="https://www.youtube.com/" target="_blank">▶ 試奏動画を見る</a>
+      <a href="demo1.zip" download>⬇ 試奏データをダウンロード</a>
+      <a href="mailto:vishvaworks2026@gmail.com?subject=Effect01購入希望">
+        🛒 購入はこちら
+      </a>
     </div>
+  </div>
 
-    <!-- ===== 2台目（7月追加予定）===== -->
-    <div class="product-card">
-      <img src="comingsoon.png" alt="Coming Soon">
-      <h3>COMING SOON</h3>
-      <p>Next experimental drive.</p>
-      <span class="price">2026.07</span>
-      <a href="#" class="btn">DETAILS</a>
+  <!-- ===== 2台目（7月予定） ===== -->
+  <div class="effect-card">
+    <img src="effect2.jpg" alt="Effect 02">
+    <h2>Effect 02 (Coming July)</h2>
+    <p>現在制作中。</p>
+
+    <div class="effect-links">
+      <a href="#">準備中</a>
     </div>
-
   </div>
 
 </section>
-<p class="contact">
-  ご注文はこちらから：
-  <a href="mailto:vishvaworks2026@gmail.com">
-    vishvaworks2026@gmail.com
-  </a>
-</p>
+
+<!-- ===== フッター ===== -->
 <footer class="site-footer">
   <img src="94843248-9FE4-4FD3-8D0F-46DC4A99C033.PNG" alt="Vishva Works Logo" class="footer-logo">
-
   <p>
     © Vishva Works<br>
     当サークルは免税事業者です。
   </p>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const sections = document.querySelectorAll("section");
-
-  function checkScroll() {
-    sections.forEach(section => {
-      const position = section.getBoundingClientRect().top;
-      const screenHeight = window.innerHeight;
-
-      if (position < screenHeight - 100) {
-        section.classList.add("show");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", checkScroll);
-
-  // ページ読み込み時にも発動
-  checkScroll();
-
-});
-</script>
 
 </body>
 </html>
